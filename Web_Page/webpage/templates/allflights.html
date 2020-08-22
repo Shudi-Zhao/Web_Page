@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<h3>Lists of all flights</h3>
+    {% for r in result %}
+    	<p>
+    	<ul><li>
+    	<ul>
+    		<li>From {{ r.from_airport }} to {{ r.to_airport }}</li>
+    		<li>Airline: {{ r.airline_name }}</li>
+    		<li>Flight number: {{ r.flight_num }}</li>
+    		<li>Departure time: {{ r.dep_date }} {{ r.dep_time }}</li>
+    		<li>Arrival time: {{ r.arr_date }} {{ r.arr_time }}</li>
+    		<li>price: ${{ r.price }}</li>
+    	</ul>  
+    	</ul></li> 
+    	</p>
+    {% endfor %}	
+{% endblock content %}

@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+    <style>
+                    body { background-image: url("https://images.wallpaperscraft.com/image/bridge_clouds_minimalism_125968_1280x720.jpg");
+                            background-repeat:no-repeat;
+                            background-size:cover;
+                            } 
+    </style>
+<body>
+	<h3>Customer who generated the most revenue: </h3>
+    {% for r in result2 %}
+    	<li>
+    		<ul>User Name: {{ r.user_name }} </ul>
+    	</li>
+    {% endfor %}
+    {% for k in result %}	
+    	<li>
+    		<ul>User Email: {{ k.User }} </ul>
+    	</li>
+    {% endfor %}	
+</body>
+{% endblock content %}

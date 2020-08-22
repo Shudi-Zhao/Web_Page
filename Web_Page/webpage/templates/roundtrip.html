@@ -1,0 +1,121 @@
+{% extends "layout.html" %}
+{% block content %}
+    <style>
+                    body { background-image: url("https://images.wallpaperscraft.com/image/bridge_clouds_minimalism_125968_1280x720.jpg");
+                            background-repeat:no-repeat;
+                            background-size:cover;
+                            } 
+    </style>
+<body>
+    <h1>Hi {{ current_user.name }}, You can make your reservations!</h1>
+	<div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Flight Search</legend>
+                <div class="form-group">
+                    {{ form.flying_from.label(class="form-control-label") }}
+
+                    {% if form.flying_from.errors %}
+                        {{ form.flying_from(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.flying_from.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.flying_from(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.going_to.label(class="form-control-label") }}
+
+                    {% if form.going_to.errors %}
+                        {{ form.going_to(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.going_to.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.going_to(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.departure_date.label(class="form-control-label") }}
+
+                    {% if form.departure_date.errors %}
+                        {{ form.departure_date(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.departure_date.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.departure_date(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.return_date.label(class="form-control-label") }}
+
+                    {% if form.return_date.errors %}
+                        {{ form.return_date(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.return_date.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.return_date(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.meal.label(class="form-control-label") }}
+
+                    {% if form.meal.errors %}
+                        {{ form.meal(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.meal.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.meal(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.seat.label(class="form-control-label") }}
+
+                    {% if form.seat.errors %}
+                        {{ form.seat(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.seat.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.seat(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.seat_num.label(class="form-control-label") }}
+
+                    {% if form.seat_num.errors %}
+                        {{ form.seat_num(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.seat_num.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.seat_num(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+</body>
+{% endblock content %}

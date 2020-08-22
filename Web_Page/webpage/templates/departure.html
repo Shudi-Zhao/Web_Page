@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block content %}
+    <style>
+                    body { background-image: url("https://images.wallpaperscraft.com/image/bridge_clouds_minimalism_125968_1280x720.jpg");
+                            background-repeat:no-repeat;
+                            background-size:cover;
+                            } 
+    </style>
+<body>
+    <h1>Aviliable Departure Flights</h1>
+ 		<form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Flight Search</legend>
+                <div class="form-group">
+                    {{ form.select.label(class="form-control-label") }}
+                    {% if form.select.errors %}
+                        {{ form.select(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.select.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.select(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+</body>
+{% endblock content %}

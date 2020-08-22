@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+    <style>
+                    body { background-image: url("https://images.wallpaperscraft.com/image/bridge_clouds_minimalism_125968_1280x720.jpg");
+                            background-repeat:no-repeat;
+                            background-size:cover;
+                            } 
+    </style>
+<body>
+	<br></br>
+    {% for r in result %}
+    	{% if r['SUM(Reserve.price)'] == None %}
+    		<h3>The sales report for the month you want is: $0 </h3>
+    	{% else %}
+    		<h3>The sales report for the month you want is: ${{ r['SUM(Reserve.price)'] }}</h3>
+    	{% endif %}
+    {% endfor %}	
+</body>
+{% endblock content %}
+
+
+    

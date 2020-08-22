@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+    <style>
+                    body { background-image: url("https://images.wallpaperscraft.com/image/bridge_clouds_minimalism_125968_1280x720.jpg");
+                            background-repeat:no-repeat;
+                            background-size:cover;
+                            } 
+    </style>
+<body>
+    {% for r in result %}
+        <h3>
+        	The Total Revenue for the given flight number is: ${{ r['SUM(Reserve.price)'] }}
+        </h3>
+    {% endfor %}	
+</body>
+{% endblock content %}

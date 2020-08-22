@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+    <style>
+                    body { background-image: url("https://images.wallpaperscraft.com/image/bridge_clouds_minimalism_125968_1280x720.jpg");
+                            background-repeat:no-repeat;
+                            background-size:cover;
+                            } 
+    </style>
+<body>
+<h3>A list of all customers who have seats reserved on a given flight:</h3>
+    {% for r in result %}
+    <ul>
+    	<li>
+    		<p>{{ r.User }}</p>
+    	</li>
+    </ul>
+    {% endfor %}
+</body>	
+{% endblock content %}
