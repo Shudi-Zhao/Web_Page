@@ -1,4 +1,4 @@
-# Web_Page
+# Itravel
 
 This is a flight reservation  web page called  itravel that written in Python flask. 
 Users need to create a customer account in order to make flight reservations(one way or round trip). Customers
