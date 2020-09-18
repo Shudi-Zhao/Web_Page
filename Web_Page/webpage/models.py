@@ -4,9 +4,9 @@ from flask_login import UserMixin
 
 import mysql.connector
 mydb = mysql.connector.connect(
-  host="mydatabase.clslb5ktpqun.us-east-1.rds.amazonaws.com",
-  user="shudi",
-  passwd="shudizhao923",
+  host="host",
+  user="user",
+  passwd="password",
   database = "mydatabase"
 )
 
