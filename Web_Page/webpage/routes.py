@@ -8,10 +8,10 @@ from datetime import date
 import mysql.connector
 
 mydb = mysql.connector.connect(
-  host="mydatabase.clslb5ktpqun.us-east-1.rds.amazonaws.com",
-  user="shudi",
-  passwd="shudizhao923",
-  database = "mydatabase"
+  host="host",
+  user="username",
+  passwd="password",
+  database = "database"
 )
 #Here is to build up a database for selling tickets.
 
