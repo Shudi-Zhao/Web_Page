@@ -12,6 +12,7 @@ This project is an airline reservation system that allows users to search for fl
 ## Technology Stack
 
 - **Back-end**: Flask (Python)
-- **Database**: SQLite (with SQLAlchemy for ORM)
+- **Database**: SQLite (with SQLAlchemy for ORM), Amazon RDS
 - **Front-end**: HTML5, CSS, Jinja2 templates
 - **Forms & Validation**: Flask-WTF, WTForms
+- **Server** Amazon EC2
